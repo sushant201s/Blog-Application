@@ -1,0 +1,13 @@
+<!-- include the header partial -->
+<%- include("partials/header.ejs") %>
+
+<h1>Create a new Blog Post</h1>
+<form action="/create" method="post">
+    Name<input type="text" name="name">
+    Title<input type="text" name="title">
+    Body<input type="text" name="description">
+    <button type="submit">Create Blog</button>
+</form>
+
+<!-- inlcude the footer partial -->
+<%- include("partials/footer.ejs") %>

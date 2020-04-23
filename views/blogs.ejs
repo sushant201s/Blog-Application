@@ -1,0 +1,16 @@
+<!-- include the header partial -->
+<%- include("partials/header.ejs") %>
+
+<h1 id="welcome">Welcome to Blog Posts</h1>
+
+<a href="/create" id="create-link">Create New Post</a>
+<div class="posts">
+    <% blogs.forEach(function(blog){ %>
+    <a href="/blogs/<%= blog.id %>">
+        <h1><%= blog.title %></h1>
+    </a>
+    <%});%>
+</div>
+
+<!-- inlcude the footer partial -->
+<%- include("partials/footer.ejs") %>

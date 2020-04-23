@@ -1,0 +1,12 @@
+<!-- include the header partial -->
+<%- include("partials/header.ejs") %>
+<form action="/blogs/<%= blog.id %>/edit" method="post">
+    Title: <input type="text" name="title" placeholder="<%= blog.title %>" value="<%= blog.title %>">
+    <h2><%= blog.id %></h2>
+     Description: <input type="text" name="description" placeholder="<%= blog.description %>" value="<%= blog.description %>">
+    <input type="hidden" name="id" value="<%= blog.id %>" />
+    <button type="submit">Save Edit</button>
+</form>
+
+<!-- inlcude the footer partial -->
+<%- include("partials/footer.ejs") %>
